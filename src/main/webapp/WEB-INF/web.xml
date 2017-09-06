@@ -41,15 +41,49 @@
         <servlet-name>productRemoveFromBucket</servlet-name>
         <url-pattern>/productRemoveFromBucket.do</url-pattern>
     </servlet-mapping>
-    <!--demo-->
+
+    <!--CUSTOM SESSION CONTROLLERS-->
+    <!--product-->
     <servlet>
-        <servlet-name>Demo</servlet-name>
-        <servlet-class>com.vetallWebapp.controller.demo.DemoController</servlet-class>
+        <servlet-name>customProductController</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.customSessionControllersOnServer.CustomProductController</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>Demo</servlet-name>
-        <url-pattern>/demo.do</url-pattern>
+        <servlet-name>customProductController</servlet-name>
+        <url-pattern>/productCustomSession.se</url-pattern>
     </servlet-mapping>
+    <!--productAll-->
+    <servlet>
+        <servlet-name>productAllControllerCustomSession</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.customSessionControllersOnServer.CustomProductAllController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAllControllerCustomSession</servlet-name>
+        <url-pattern>/productAllCustomSession.se</url-pattern>
+    </servlet-mapping>
+    <!--productAddToBucket-->
+    <servlet>
+        <servlet-name>productAddToBucketCustomSession</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.customSessionControllersOnServer.CustomProductAddToBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAddToBucketCustomSession</servlet-name>
+        <url-pattern>/productAddToBucket.se</url-pattern>
+    </servlet-mapping>
+    <!--productRemoveFromBucket-->
+    <servlet>
+        <servlet-name>productRemoveFromBucketCustomSession</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.customSessionControllersOnServer.CustomProductRemoveFromBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productRemoveFromBucketCustomSession</servlet-name>
+        <url-pattern>/productRemoveFromBucket.se</url-pattern>
+    </servlet-mapping>
+
+
+
+
+    <!--demo-->
     <servlet>
         <servlet-name>mvcDemo</servlet-name>
         <servlet-class>com.vetallWebapp.controller.demo.MVCDemoController</servlet-class>
