@@ -1,4 +1,4 @@
-package com.vetallWebapp.entity;
+package com.vetallWebapp.entity.demo;
 
 public class DemoEntityB {
     private String str = "HelloFromEntityB";

@@ -1,6 +1,6 @@
 package com.vetallWebapp.controller.demo;
 
-import com.vetallWebapp.entity.DemoEntityA;
+import com.vetallWebapp.entity.demo.DemoEntityA;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -1,4 +1,4 @@
-package com.vetallWebapp.entity;
+package com.vetallWebapp.entity.demo;
 
 import java.util.Arrays;
 import java.util.HashMap;
