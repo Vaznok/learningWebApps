@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+
+    <!--CONTROLLERS-->
+    <!--product-->
+    <servlet>
+        <servlet-name>productController</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.ProductController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productController</servlet-name>
+        <url-pattern>/product.do</url-pattern>
+    </servlet-mapping>
+    <!--productAll-->
+    <servlet>
+        <servlet-name>productAllController</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.ProductAllController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAllController</servlet-name>
+        <url-pattern>/productAll.do</url-pattern>
+    </servlet-mapping>
+    <!--productAddToBucket-->
+    <servlet>
+        <servlet-name>productAddToBucket</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.ProductAddToBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productAddToBucket</servlet-name>
+        <url-pattern>/productAddToBucket.do</url-pattern>
+    </servlet-mapping>
+    <!--productRemoveFromBucket-->
+    <servlet>
+        <servlet-name>productRemoveFromBucket</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.ProductRemoveFromBucketController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>productRemoveFromBucket</servlet-name>
+        <url-pattern>/productRemoveFromBucket.do</url-pattern>
+    </servlet-mapping>
+    <!--demo-->
+    <servlet>
+        <servlet-name>Demo</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.demo.DemoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Demo</servlet-name>
+        <url-pattern>/demo.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>mvcDemo</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.demo.MVCDemoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>mvcDemo</servlet-name>
+        <url-pattern>/mvcDemo.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>sessionDemo</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.demo.SessionDemoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sessionDemo</servlet-name>
+        <url-pattern>/sessionDemo.do</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>cookieDemo</servlet-name>
+        <servlet-class>com.vetallWebapp.controller.demo.CookieDemoController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cookieDemo</servlet-name>
+        <url-pattern>/cookieDemo.do</url-pattern>
+    </servlet-mapping>
+
+    <!--FILTERS-->
+    <!--processing time-->
+    <filter>
+        <filter-name>timeFilter</filter-name>
+        <filter-class>com.vetallWebapp.filter.ProcessingTimeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>timeFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!--request filter-->
+    <filter>
+        <filter-name>infoFilter</filter-name>
+        <filter-class>com.vetallWebapp.filter.RequestInfoFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>infoFilter</filter-name>
+        <url-pattern>*.do</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+    </filter-mapping>
+
+    
+    <!--LISTENERS-->
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionActivationListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyRequestContextAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyServletRequestListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyServletContextListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyServletContextAttributeListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionListener</listener-class>
+    </listener>
+    <listener>
+        <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionBindingListener</listener-class>
+    </listener>
+
+    
+    <session-config>
+        <session-timeout>240</session-timeout>
+    </session-config>
+
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+</web-app>
