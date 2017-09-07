@@ -1,9 +1,9 @@
-package com.vetallWebapp.dao.impl;
+package com.vetallWebapp.eshop.dao.impl;
 
-import com.vetallWebapp.dao.ProductDao;
+import com.vetallWebapp.eshop.dao.ProductDao;
 import com.vetallWebapp.entity.Product;
-import com.vetallWebapp.dao.exception.DaoSystemException;
-import com.vetallWebapp.dao.exception.NoSuchEntityException;
+import com.vetallWebapp.eshop.dao.exception.DaoSystemException;
+import com.vetallWebapp.eshop.dao.exception.NoSuchEntityException;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,15 +1,13 @@
 package com.vetallWebapp.controller;
 
-import com.vetallWebapp.dao.ProductDao;
-import com.vetallWebapp.dao.impl.ProductDaoMock;
+import com.vetallWebapp.eshop.dao.ProductDao;
 import com.vetallWebapp.entity.Product;
-import com.vetallWebapp.dao.exception.DaoSystemException;
-import com.vetallWebapp.dao.exception.NoSuchEntityException;
+import com.vetallWebapp.eshop.dao.exception.DaoSystemException;
+import com.vetallWebapp.eshop.dao.exception.NoSuchEntityException;
 import com.vetallWebapp.inject.DependencyInjectionServlet;
 import com.vetallWebapp.inject.Inject;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;

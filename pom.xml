@@ -8,23 +8,32 @@
     <version>0.1</version>
     <name>vetall-webapp Maven Webapp</name>
     <packaging>war</packaging>
+
+    <properties>
+        <spring.version>4.3.3.RELEASE</spring.version>
+        <servlet.version>3.1.0</servlet.version>
+        <junit.version>3.8.1</junit.version>
+        <jstl.version>1.2</jstl.version>
+        <aspectj.version>1.7.4</aspectj.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>3.8.1</version>
+            <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
-            <version>3.1.0</version>
+            <version>${servlet.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
-            <version>1.2</version>
+            <version>${jstl.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
@@ -40,15 +49,36 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>${spring.version}</version>
+        <scope>compile</scope>
+    </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <artifactId>spring-expression</artifactId>
             <version>${spring.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <!--Spring AOP-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aop</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjrt</artifactId>
+            <version>${aspectj.version}</version>
+        </dependency>
     </dependencies>
-    <properties>
-        <spring.version>4.3.3.RELEASE</spring.version>
-    </properties>
+
     <build>
         <finalName>vetall-webapp</finalName>
         <pluginManagement>

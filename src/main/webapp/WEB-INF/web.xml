@@ -98,7 +98,7 @@
 
     
     <!--LISTENERS-->
-    <listener>
+   <!-- <listener>
         <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionActivationListener</listener-class>
     </listener>
     <listener>
@@ -121,9 +121,13 @@
     </listener>
     <listener>
         <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionBindingListener</listener-class>
-    </listener>
+    </listener>-->
 
-    
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/appContex-dao-aop-annotation.xml</param-value>
+    </context-param>
+
     <session-config>
         <session-timeout>240</session-timeout>
     </session-config>

@@ -1,4 +1,4 @@
-package com.vetallWebapp.dao.exception;
+package com.vetallWebapp.eshop.dao.exception;
 
 public class DaoSystemException extends DaoException {
     public DaoSystemException(String message) {

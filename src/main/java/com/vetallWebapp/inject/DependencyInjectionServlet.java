@@ -1,5 +1,6 @@
 package com.vetallWebapp.inject;
 
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -23,6 +24,7 @@ public class DependencyInjectionServlet extends HttpServlet {
 
         try {
             ApplicationContext appCtx = new ClassPathXmlApplicationContext(appCtxPath);
+
             List<Field> allFields = FieldReflector.collectUpTo(this.getClass(), DependencyInjectionServlet.class);
             List<Field> injectFields = FieldReflector.filterInject(allFields);
 

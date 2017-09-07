@@ -12,11 +12,26 @@
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/resources" />
         </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="fileset" name="AppContext Demo" removed="false">
+          <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="AppContex Dao Aop Annotation" removed="false">
+          <file>file://$MODULE_DIR$/src/resources/appContex-dao-aop-annotation.xml</file>
+          <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
+        </fileset>
+        <fileset id="fileset3" name="AppContex Dao Aop Schema" removed="false">
+          <file>file://$MODULE_DIR$/src/resources/appContex-dao-aop-schema.xml</file>
+          <file>file://$MODULE_DIR$/src/resources/appContex-dao-aop-annotation.xml</file>
+          <file>file://$MODULE_DIR$/src/resources/appContex-dao.xml</file>
+          <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
@@ -38,7 +53,9 @@
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context:4.3.3.RELEASE" level="project" />
-    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.7.4" level="project" />
+    <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.7.4" level="project" />
   </component>
 </module>
