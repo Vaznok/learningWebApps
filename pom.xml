@@ -36,6 +36,8 @@
             <version>${jstl.version}</version>
             <scope>compile</scope>
         </dependency>
+
+        <!-- Spring -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>

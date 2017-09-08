@@ -37,4 +37,8 @@ public class ProductController extends DependencyInjectionServlet {
             resp.sendRedirect(PAGE_ERROR);
         }
     }
+
+    public void setProductDao(ProductDao productDao) {
+        this.productDao = productDao;
+    }
 }

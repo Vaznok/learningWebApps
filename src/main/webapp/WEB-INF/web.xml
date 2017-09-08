@@ -125,7 +125,7 @@
 
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/appContex-dao-aop-annotation.xml</param-value>
+        <param-value>/appContex-dao-aop-schema.xml</param-value>
     </context-param>
 
     <session-config>

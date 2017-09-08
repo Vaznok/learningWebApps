@@ -1,6 +1,6 @@
 package com.vetallWebapp.inject;
 
-import org.springframework.beans.factory.BeanFactory;
+import com.vetallWebapp.eshop.dao.ProductDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -34,7 +34,7 @@ public class DependencyInjectionServlet extends HttpServlet {
                 System.out.println("I find method marked by @Inject: " + field);
                 String beanName = annotation.value();
                 System.out.println("I must instantiate and inject '" + beanName + "'");
-                Object bean = appCtx.getBean(beanName);
+                ProductDao bean = (ProductDao) appCtx.getBean(beanName);
                 System.out.println("Instantiation - OK: '" + beanName + "'");
                 if (bean == null) {
                     throw new ServletException("There isn't bean with name '" + beanName + "'");
