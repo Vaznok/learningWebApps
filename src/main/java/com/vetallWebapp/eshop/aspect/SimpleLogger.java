@@ -7,7 +7,7 @@ public class SimpleLogger {
         try {
             return call.proceed();
         } finally {
-            System.out.println("ASPECT.LOGGER: " + call.toShortString() + " called. args[" + call.getSignature(). + "]");
+            System.out.println("ASPECT.LOGGER: " + call.toShortString() + " called.");
         }
     }
 }

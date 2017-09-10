@@ -13,13 +13,13 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 public class ProductController extends DependencyInjectionServlet {
-    private static final String PARAM_ID = "id";
-    private static final String ATTRIBUTE_MODEL_TO_VIEW = "product";
-    private static final String PAGE_OK = "product.jsp";
-    private static final String PAGE_ERROR = "error.jsp";
+    static final String PARAM_ID = "id";
+    static final String ATTRIBUTE_MODEL_TO_VIEW = "product";
+    static final String PAGE_OK = "product.jsp";
+    static final String PAGE_ERROR = "error.jsp";
 
     @Inject("productDao")
-    private ProductDao productDao;
+    ProductDao productDao;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -34,11 +34,7 @@ public class ProductController extends DependencyInjectionServlet {
             } catch (NumberFormatException | NoSuchEntityException | DaoSystemException e) {
                 //NOP
             }
-            resp.sendRedirect(PAGE_ERROR);
         }
-    }
-
-    public void setProductDao(ProductDao productDao) {
-        this.productDao = productDao;
+        resp.sendRedirect(PAGE_ERROR);
     }
 }
