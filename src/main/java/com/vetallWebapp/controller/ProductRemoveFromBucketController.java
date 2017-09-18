@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-import static com.vetallWebapp.helper.SessionAttributes.PRODUCTS_IN_BUCKET;
+import static com.vetallWebapp.helper.Constants.PRODUCTS_IN_BUCKET;
 import static java.util.Collections.unmodifiableMap;
 
 public class ProductRemoveFromBucketController extends HttpServlet {
