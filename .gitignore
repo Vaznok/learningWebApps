@@ -3,6 +3,8 @@
 ### My default ###
 target/
 *.log
+.idea/artifacts/
+
 
 ### Intellij ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
