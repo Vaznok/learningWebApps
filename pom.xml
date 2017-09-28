@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <modelVersion>4.0.0</modelVersion>
     <groupId>ua.vetall-webapp.learning</groupId>
    <!-- <artifactId>vetall-webapp</artifactId>
@@ -20,6 +21,10 @@
         <mockito.version>1.10.19</mockito.version>
         <jstl.version>1.2</jstl.version>
         <aspectj.version>1.7.4</aspectj.version>
+        <mysql.version>6.0.6</mysql.version>
+        <spring-jdbc.version>3.0.4.RELEASE</spring-jdbc.version>
+        <hsqldb.version>2.3.4</hsqldb.version>
+        <bonecp.version>0.8.0.RELEASE</bonecp.version>
     </properties>
 
     <dependencies>
@@ -110,13 +115,28 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>6.0.6</version>
+            <version>${mysql.version}</version>
             <scope>compile</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>${spring-jdbc.version}</version>
+        </dependency>
+        <!--embedded DB-->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>${hsqldb.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <!--JDBC connection pool-->
+        <dependency>
+            <groupId>com.jolbox</groupId>
+            <artifactId>bonecp</artifactId>
+            <version>${bonecp.version}</version>
+        </dependency>
     </dependencies>
-
-
-
 
     <build>
         <finalName>vetall-webapp</finalName>

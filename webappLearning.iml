@@ -30,6 +30,9 @@
           <file>file://$MODULE_DIR$/src/resources/appContex-dao.xml</file>
           <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
         </fileset>
+        <fileset id="fileset4" name="AppContex Dao External Tx" removed="false">
+          <file>file://$MODULE_DIR$/src/main/resources/appContex-dao-external-tx.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>
@@ -58,5 +61,12 @@
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.7.4" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjrt:1.7.4" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:6.0.6" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:3.0.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework:spring-tx:3.0.4.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hsqldb:hsqldb:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: com.jolbox:bonecp:0.8.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:15.0" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.2" level="project" />
   </component>
 </module>
