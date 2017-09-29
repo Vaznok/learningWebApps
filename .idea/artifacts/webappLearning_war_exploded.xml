@@ -20,7 +20,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:3.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:3.0.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
-          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.3.4" />
+          <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.4.0" />
           <element id="library" level="project" name="Maven: com.jolbox:bonecp:0.8.0.RELEASE" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2" />

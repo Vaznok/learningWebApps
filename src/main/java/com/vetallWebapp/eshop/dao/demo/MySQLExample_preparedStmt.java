@@ -4,7 +4,6 @@ import com.vetallWebapp.entity.Product;
 import com.vetallWebapp.eshop.dao.ProductDao;
 import com.vetallWebapp.eshop.dao.exception.DaoSystemException;
 import com.vetallWebapp.eshop.dao.exception.NoSuchEntityException;
-import com.vetallWebapp.helper.JdbcUtils;
 
 import java.sql.*;
 import java.util.List;
@@ -34,10 +33,10 @@ public class MySQLExample_preparedStmt implements ProductDao{
             conn.commit();
             return result;
         } catch (SQLException e) {
-            JdbcUtils.rollbackQuietly(conn);
+            com.vetallWebapp.eshop.dao.impl.jdbc.JdbcUtils.rollbackQuitely(conn);
             throw new DaoSystemException("Some exception", e);
         } finally {
-            JdbcUtils.closeQuietly(rs, stmt, conn);
+            com.vetallWebapp.eshop.dao.impl.jdbc.JdbcUtils.closeQuietly(rs, stmt, conn);
         }
     }
 

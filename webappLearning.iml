@@ -10,30 +10,13 @@
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
           <root url="file://$MODULE_DIR$/src/main/resources" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
         </sourceRoots>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset" name="AppContext Demo" removed="false">
-          <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
-        </fileset>
-        <fileset id="fileset2" name="AppContex Dao Aop Annotation" removed="false">
-          <file>file://$MODULE_DIR$/src/resources/appContex-dao-aop-annotation.xml</file>
-          <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
-        </fileset>
-        <fileset id="fileset3" name="AppContex Dao Aop Schema" removed="false">
-          <file>file://$MODULE_DIR$/src/resources/appContex-dao-aop-schema.xml</file>
-          <file>file://$MODULE_DIR$/src/resources/appContex-dao-aop-annotation.xml</file>
-          <file>file://$MODULE_DIR$/src/resources/appContex-dao.xml</file>
-          <file>file://$MODULE_DIR$/src/resources/appContext-demo.xml</file>
-        </fileset>
-        <fileset id="fileset4" name="AppContex Dao External Tx" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/appContex-dao-external-tx.xml</file>
-        </fileset>
-      </configuration>
+      <configuration />
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
@@ -64,7 +47,7 @@
     <orderEntry type="library" name="Maven: org.springframework:spring-jdbc:3.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-tx:3.0.4.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
-    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hsqldb:hsqldb:2.3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.hsqldb:hsqldb:2.4.0" level="project" />
     <orderEntry type="library" name="Maven: com.jolbox:bonecp:0.8.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: com.google.guava:guava:15.0" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.7.2" level="project" />

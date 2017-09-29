@@ -2,12 +2,13 @@ package com.vetallWebapp.inject;
 
 import com.vetallWebapp.eshop.dao.ProductDao;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import java.lang.reflect.Field;
 import java.util.List;
+
+import static com.vetallWebapp.inject.ApplicationContextHolder.getClassPathXmlApplicationContext;
 
 public class DependencyInjectionServlet extends HttpServlet {
     private static final String APP_CTX_PATH = "contextConfigLocation";
@@ -23,7 +24,7 @@ public class DependencyInjectionServlet extends HttpServlet {
         }
 
         try {
-            ApplicationContext appCtx = new ClassPathXmlApplicationContext(appCtxPath);
+            ApplicationContext appCtx = getClassPathXmlApplicationContext(appCtxPath);
 
             List<Field> allFields = FieldReflector.collectUpTo(this.getClass(), DependencyInjectionServlet.class);
             List<Field> injectFields = FieldReflector.filterInject(allFields);
@@ -34,7 +35,7 @@ public class DependencyInjectionServlet extends HttpServlet {
                 System.out.println("I find method marked by @Inject: " + field);
                 String beanName = annotation.value();
                 System.out.println("I must instantiate and inject '" + beanName + "'");
-                ProductDao bean = (ProductDao) appCtx.getBean(beanName);
+                Object bean = appCtx.getBean(beanName);
                 System.out.println("Instantiation - OK: '" + beanName + "'");
                 if (bean == null) {
                     throw new ServletException("There isn't bean with name '" + beanName + "'");

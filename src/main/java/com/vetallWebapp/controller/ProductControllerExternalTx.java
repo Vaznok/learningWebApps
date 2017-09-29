@@ -2,8 +2,8 @@ package com.vetallWebapp.controller;
 
 import com.vetallWebapp.entity.Product;
 import com.vetallWebapp.eshop.dao.ProductDao;
-import com.vetallWebapp.eshop.dao.exception.DaoSystemException;
-import com.vetallWebapp.eshop.dao.exception.NoSuchEntityException;
+import com.vetallWebapp.eshop.dao.exception.DaoException;
+import com.vetallWebapp.eshop.dao.impl.jdbc.tx.TransactionBody;
 import com.vetallWebapp.eshop.dao.impl.jdbc.tx.TransactionManager;
 import com.vetallWebapp.inject.DependencyInjectionServlet;
 import com.vetallWebapp.inject.Inject;
@@ -12,7 +12,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.util.concurrent.Callable;
 
 public class ProductControllerExternalTx extends DependencyInjectionServlet {
     static final String PARAM_ID = "id";
@@ -32,16 +31,16 @@ public class ProductControllerExternalTx extends DependencyInjectionServlet {
         if (idStr != null) {
             try {
                 Integer id = Integer.valueOf(idStr);
-                Product model = txManager.doInTransaction(new Callable<Product>() {
+                Product model = txManager.doInTransaction(new TransactionBody<Product, DaoException>() {
                     @Override
-                    public Product call() throws Exception {
+                    public Product run() throws DaoException {
                         return productDao.selectById(id);
                     }
                 });
                 req.setAttribute(ATTRIBUTE_MODEL_TO_VIEW, model);
                 req.getRequestDispatcher(PAGE_OK).forward(req, resp);
                 return;
-            } catch (NumberFormatException | NoSuchEntityException | DaoSystemException e) {
+            } catch (NumberFormatException | DaoException e) {
                 //NOP
             }
         }

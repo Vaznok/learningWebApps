@@ -1,4 +1,4 @@
-package com.vetallWebapp.eshop.dao.impl.jdbc.tx;
+package com.vetallWebapp.eshop.dao.impl.jdbc;
 
 import javax.sql.DataSource;
 import java.io.PrintWriter;

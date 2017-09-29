@@ -12,6 +12,10 @@
         <jdbc:script location="classpath:test-data.sql"/>
     </jdbc:embedded-database>
 
+    <bean id="poolDataSource" class="com.jolbox.bonecp.BoneCPDataSource" scope="singleton">
+        <property name="datasourceBean" ref="dbDataSource"/>
+    </bean>
+
     <bean id="txManager" class="com.vetallWebapp.eshop.dao.impl.jdbc.tx.TransactionManagerImpl" scope="singleton"/>
 
     <bean id="productDao" class="com.vetallWebapp.eshop.dao.impl.jdbc.ProductDaoJdbcExternalTxImpl" scope="singleton">
