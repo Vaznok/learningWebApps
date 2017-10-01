@@ -4,7 +4,53 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
 
+    <!-- Conntext and configure-->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>/appContex-dao-spring.xml</param-value>
+    </context-param>
+    <session-config>
+        <session-timeout>240</session-timeout>
+    </session-config>
+
+    <!--JSF load-->
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Development</param-value>
+    </context-param>
+    <!--Welcome Page-->
+    <welcome-file-list>
+        <welcome-file>faces/enterData.xhtml</welcome-file>
+    </welcome-file-list>
+    <!--JSF mapping -->
+    <servlet>
+        <servlet-name>facesServlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>facesServlet</servlet-name>
+        <url-pattern>*.jsf</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>facesServlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>facesServlet</servlet-name>
+        <url-pattern>*.faces</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>facesServlet</servlet-name>
+        <url-pattern>*.xhtml</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
+        <param-value>.xml</param-value>
+    </context-param>
+
     <!--CONTROLLERS-->
+    <!--product with TxManager-->
     <servlet>
         <servlet-name>productTx</servlet-name>
         <servlet-class>com.vetallWebapp.controller.ProductControllerExternalTx</servlet-class>
@@ -130,17 +176,4 @@
     <listener>
         <listener-class>com.vetallWebapp.listener.demo.MyHttpSessionBindingListener</listener-class>
     </listener>-->
-
-    <context-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>/appContex-dao-external-tx.xml</param-value>
-    </context-param>
-
-    <session-config>
-        <session-timeout>240</session-timeout>
-    </session-config>
-
-    <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
-    </welcome-file-list>
 </web-app>

@@ -11,7 +11,7 @@ public class ApplicationContextHolder {
 
     static synchronized ApplicationContext getClassPathXmlApplicationContext(String path) {
         if(!pathToContextRepository.containsKey(path)) {
-            pathToContextRepository.put(path, new ClassPathXmlApplicationContext());
+            pathToContextRepository.put(path, new ClassPathXmlApplicationContext(path));
         }
         return pathToContextRepository.get(path);
     }

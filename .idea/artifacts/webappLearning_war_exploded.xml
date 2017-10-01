@@ -24,6 +24,7 @@
           <element id="library" level="project" name="Maven: com.jolbox:bonecp:0.8.0.RELEASE" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2" />
+          <element id="library" level="project" name="Maven: org.glassfish:javax.faces:2.2.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">

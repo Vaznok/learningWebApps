@@ -1,5 +1,5 @@
 CREATE TABLE Products (
-  id int NOT NULL AUTO_INCREMENT,
+  id INTEGER NOT NULL,
   name VARCHAR(256) NOT NULL,
   PRIMARY KEY (id)
 );

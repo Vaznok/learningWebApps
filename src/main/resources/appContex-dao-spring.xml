@@ -16,7 +16,9 @@
         <property name="datasourceBean" ref="dbDataSource"/>
     </bean>
 
-    <bean id="txManager" class="com.vetallWebapp.eshop.dao.impl.jdbc.tx.TransactionManagerImpl" scope="singleton"/>
+    <bean id="txManager" class="com.vetallWebapp.eshop.dao.impl.jdbc.tx.TransactionManagerImpl" scope="singleton">
+        <property name="dataSource" ref="poolDataSource"/>
+    </bean>
 
     <bean id="productDao" class="com.vetallWebapp.eshop.dao.impl.jdbc.ProductDaoJdbcExternalTxImpl" scope="singleton">
         <property name="dataSource" ref="txManager"></property>

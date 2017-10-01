@@ -1,4 +1,4 @@
-INSERT INTO Products (name) VALUES ('Paper');
-INSERT INTO Products (name) VALUES ('Table');
-INSERT INTO Products (name) VALUES ('Bread');
+INSERT INTO Products (id, name) VALUES (1, 'Paper');
+INSERT INTO Products (id, name) VALUES (2, 'Table');
+INSERT INTO Products (id, name) VALUES (3, 'Bread');
 
