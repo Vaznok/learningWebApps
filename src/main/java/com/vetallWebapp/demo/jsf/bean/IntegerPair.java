@@ -1,8 +1,8 @@
 package com.vetallWebapp.demo.jsf.bean;
 
 public class IntegerPair {
-    private int fst;
-    private int scd;
+    public int fst;
+    public int scd;
 
     public IntegerPair(int fst, int scd) {
         this.fst = fst;

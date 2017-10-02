@@ -8,6 +8,7 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
+          <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.2.1-b03" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: commons-logging:commons-logging:1.2" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" />
@@ -24,7 +25,8 @@
           <element id="library" level="project" name="Maven: com.jolbox:bonecp:0.8.0.RELEASE" />
           <element id="library" level="project" name="Maven: com.google.guava:guava:15.0" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.2" />
-          <element id="library" level="project" name="Maven: org.glassfish:javax.faces:2.2.8" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-api:2.2.14" />
+          <element id="library" level="project" name="Maven: com.sun.faces:jsf-impl:2.2.14" />
         </element>
       </element>
       <element id="directory" name="META-INF">

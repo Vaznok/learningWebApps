@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+          http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+              version="2.1">
+
+    <navigation-rule>
+        <from-view-id>/static-switch.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>static-ok</from-outcome>
+            <to-view-id>/static-switch-ok.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>static-fail</from-outcome>
+            <to-view-id>/static-switch-fail.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/declarative-switch.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>less-or-more</from-outcome>
+            <if>#{declarative.value &lt; 100}</if>
+            <to-view-id>/declarative-less.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>less-or-more</from-outcome>
+            <to-view-id>/declarative-more.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+</faces-config>
