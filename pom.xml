@@ -28,6 +28,7 @@
         <jsf.version>2.2.14</jsf.version>
         <richFaces.version>4.5.1.Final</richFaces.version>
         <webSockets.version>1.1</webSockets.version>
+        <log4j.version>2.9.1</log4j.version>
     </properties>
 
     <dependencies>
@@ -167,7 +168,14 @@
             <version>${webSockets.version}</version>
             <scope>provided</scope>
         </dependency>
+        <!--Logger-->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>${log4j.version}</version>
+        </dependency>
     </dependencies>
+
 
     <build>
         <finalName>vetall-webapp</finalName>
